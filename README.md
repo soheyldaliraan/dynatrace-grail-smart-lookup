@@ -125,6 +125,3 @@ This is a **UI prototype**. The lookup catalog and the search results are mocked
 
 [MIT](./LICENSE)
 
-## Author
-
-Built by [Soheyl Daliraan](https://github.com/soheyldaliraan) for the Dynatrace TPM workshop, Grail position, May 6, 2026.
