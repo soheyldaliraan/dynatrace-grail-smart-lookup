@@ -2,13 +2,13 @@
 
 A Dynatrace App prototype that suggests the right `lookup` table as you write DQL.
 
-> Built on **Dynatrace AppEngine** with the [Dynatrace App Toolkit](https://developer.dynatrace.com/quickstart/app-toolkit/), the [Strato Design System](https://developer.dynatrace.com/design/about-strato-design-system/), and the [Dynatrace SDK for TypeScript](https://developer.dynatrace.com/develop/sdks/). Learn more on the [Dynatrace Developer portal](https://developer.dynatrace.com/) and read [About AppEngine](https://developer.dynatrace.com/plan/about-appengine/).
-
 ![Smart Lookup prototype](./screenshots/smart-lookup.png)
 
 ## About
 
-This is a prototype I built for a TPM workshop at Dynatrace (May 6, 2026). It demonstrates **Phase 1** of a 3-phase roadmap called "Grail Smart Lookups". Phase 1 is pure Grail with no AI: every suggestion comes from your in-scope fields and a known catalog of lookup tables, so every step is auditable.
+This repo is a Dynatrace App that adds smart auto-completion for `lookup` operations to the DQL editor. As you type, the app parses your query, detects the fields already in scope (from `fetch`, `fieldsAdd`, `parse`, and prior pipe steps), and offers matching lookup tables ranked by which fields they join on. Once a lookup is added, the field picker shows your original columns alongside the new prefixed columns the lookup will add.
+
+The app ships with a built-in catalog of **system lookups** (HTTP statuses, AWS and GCP regions, severity codes) and a small set of mock user-uploaded tables to demonstrate the flow. All suggestions come from a known catalog and the parsed query, so every step is auditable. No AI involved.
 
 ## What it does
 
