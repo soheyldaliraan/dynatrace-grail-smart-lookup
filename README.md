@@ -50,9 +50,17 @@ Per the [App Toolkit requirements](https://developer.dynatrace.com/quickstart/ap
    ```
 4. Start the dev server:
    ```bash
-   npm run start
+   npx dt-app dev
    ```
 5. Sign in to your Dynatrace tenant when prompted by the toolkit. The app opens in your browser.
+
+To build or deploy later:
+
+```bash
+npx dt-app build    # production build into dist/
+npx dt-app deploy   # build + deploy to the environmentUrl in app.config.json
+npx dt-app info     # toolkit and environment diagnostics
+```
 
 New to Dynatrace App development? Start with [Write your first app in 5 minutes](https://developer.dynatrace.com/quickstart/first-app-in-5-minutes/) or the [beginner tutorial](https://developer.dynatrace.com/quickstart/tutorial/).
 
