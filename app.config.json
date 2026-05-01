@@ -1,0 +1,15 @@
+{
+  "$schema": "./.dt-app/app.config.schema.json",
+  "environmentUrl": "https://<your-tenant-id>.apps.dynatrace.com/",
+  "app": {
+    "name": "Grail Auto-lookup",
+    "version": "0.0.0",
+    "description": "Phase 1 prototype: Grail suggests the right lookup table as you write DQL.",
+    "id": "my.grail.auto.lookup",
+    "icon": "ui/assets/grail-logo.svg",
+    "scopes": [
+      { "name": "storage:logs:read", "comment": "default template" },
+      { "name": "storage:buckets:read", "comment": "default template" }
+    ]
+  }
+}
