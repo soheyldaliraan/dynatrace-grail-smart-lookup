@@ -100,14 +100,6 @@ grail-auto-lookup/
 3. [`lookupCatalog.ts`](./ui/app/data/lookupCatalog.ts) holds the mock catalog. `findMatchingLookups` ranks tables that join on a field already in scope.
 4. The popup ([`LookupSuggestionPopup.tsx`](./ui/app/components/LookupSuggestionPopup.tsx)) renders ranked suggestions and inserts the lookup snippet (or a field name) on selection.
 
-## Roadmap
-
-This prototype ships **Phase 1**. Phases 2 and 3 are part of the workshop proposal:
-
-1. **Phase 1 (this prototype):** Grail Smart Lookups in the DQL editor. Pure Grail, no AI.
-2. **Phase 2:** Plain English to DQL via Davis CoPilot, with lookups still in Grail through MCP.
-3. **Phase 3:** Davis pulls business context from source systems (CMDB, Backstage, AWS tags) on consent, no upload step.
-
 ## Limitations
 
 This is a **UI prototype**. The lookup catalog and the search results are mocked in [`lookupCatalog.ts`](./ui/app/data/lookupCatalog.ts) and [`mockResults.ts`](./ui/app/data/mockResults.ts). It does not run live DQL against Grail. The smart-editor logic is real and works on any DQL string.
