@@ -1,7 +1,7 @@
 {
   "name": "grail-auto-lookup",
   "version": "0.0.0",
-  "description": "Phase 1 prototype: Grail suggests the right lookup table as you write DQL. A Dynatrace App built on AppEngine with the App Toolkit and Strato.",
+  "description": "Phase 1 prototype: Grail suggests the right lookup table as you write DQL. Select the related fields from the suggested fields list; the lookup query will be added automatically. A Dynatrace App built on AppEngine with the App Toolkit and Strato.",
   "scripts": {
     "build": "dt-app build",
     "start": "dt-app dev",

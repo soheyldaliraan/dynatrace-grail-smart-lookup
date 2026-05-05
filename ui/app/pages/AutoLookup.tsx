@@ -76,7 +76,9 @@ export const AutoLookup: React.FC = () => {
           Type <code>| lookup</code> in the editor. Grail offers matching
           lookup tables based on the fields already in your query. Then type{" "}
           <code>| fields</code> to pick from the union of your original fields
-          and the lookup&apos;s prefixed fields.
+          and the lookup&apos;s prefixed fields. Select the related fields from
+          the suggested fields list; the lookup query will be added
+          automatically.
         </Paragraph>
       </Flex>
 
