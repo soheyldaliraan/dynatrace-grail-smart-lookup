@@ -9,7 +9,16 @@ export type BuiltResults = {
   columns: string[];
 };
 
-const BASE_COLUMNS = ["timestamp", "event_type", "app_id"] as const;
+/** Mock log row fields; must match BaseLogRow so `| fields` can surface any of them */
+const MOCK_ROW_FIELDS = [
+  "timestamp",
+  "event_type",
+  "app_id",
+  "http_status",
+  "owner_team",
+  "region",
+  "severity",
+] as const satisfies readonly (keyof BaseLogRow)[];
 
 export function buildResults(
   query: string,
@@ -34,9 +43,10 @@ export function buildResults(
   }
 
   const allColumns = [
-    ...BASE_COLUMNS,
+    ...MOCK_ROW_FIELDS,
     ...[...lookupAdditionalSourceFields].filter(
-      (f) => !BASE_COLUMNS.includes(f as (typeof BASE_COLUMNS)[number]),
+      (f) =>
+        !MOCK_ROW_FIELDS.includes(f as (typeof MOCK_ROW_FIELDS)[number]),
     ),
     ...lookupColumns,
   ];
